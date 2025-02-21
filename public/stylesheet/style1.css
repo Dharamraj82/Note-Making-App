@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(15, 14, 14);
+    color: white;
+    padding: 15px;
+    padding-top: 30px;
+    font-family: "Fira Sans", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+#task{
+    display: flex;
+    justify-content: left;
+}
+.show{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.show h1{
+    font-size: 30px;
+}
+.show p{
+    font-size: 25px;
+    color: azure;
+    font-weight: 500;
+    font-family:sans-serif;
+}
+.show a{
+color: blue;
+text-decoration: none;
+font-size: 20px;
+font-weight: 500;
+
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Making App</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+        <div id="enter">
+            <form action="/create" method="post">
+                <input type="text" name="title" id="title" placeholder="Enter Title" required>
+                <textarea name="details" id="details" placeholder="Enter Details" rows="2"></textarea>
+                <button>Create</button>
+            </form>
+         <div id="task">
+            <% if(files.length > 0){ %>
+                <% files.forEach(function(val){ %>
+                    <div class="show">
+                        <div class="date"><h4 id="currentDate"></h4></div>
+                        <a href="/edit/<%= val %>"><i class="ri-edit-2-line"></i></a>
+                        <h1><%= val %></h1>
+                        <p></p>
+                        <a href="/files/<%= val %>">Read more</a>
+                        <a href="/delete/<%= val %>"><i class="ri-chat-delete-line"></i></a>
+                    </div>
+                    <% }) %>
+            <% } else { %>
+                <div>
+                    <h2>Nothing to do? Add a task and get things done!</h2>
+                </div>
+           <% } %>
+         </div>
+        </div>
+
+
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

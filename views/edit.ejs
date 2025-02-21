@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Making App</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+        <div class="enter">
+            <a href="/">Back to home</a>
+            <form id="update" action="/edit" method="post">
+               <div class="edit">
+                <input class="title" type="text" name="previous" placeholder="Previous Name" value="<%= filename %>" required>
+                <textarea class="details" name="previous_details" placeholder="Previous Details"><%= filedata %></textarea>
+                
+               </div>
+               <div class="edit">
+                <input type="text" name="new" placeholder="Enetr New Name" required>
+                <textarea  name="new_details" placeholder="New Details"></textarea>
+               </div>
+                <button>Update</button>
+            </form>
+        </div>
+
+
+    <script src="/javascript/script.js"></script>
+</body>
+</html>
